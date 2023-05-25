@@ -3,13 +3,12 @@ import { v4 as createUuid } from 'uuid';
 
 export class User {
     private _id:string
-    
+    protected transactions:Transaction[]
     constructor (
         public _name: string,
         public _cpf:string,
         public _email:string,
-        public _age:string,
-        protected transactions:Transaction[]
+        public _age:number,
     ){
         this._id = createUuid();
     }
